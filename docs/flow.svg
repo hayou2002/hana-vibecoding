@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 800" width="1220" height="800" role="img" aria-label="Hana VibeCoding 开发脚手架：两大支柱与五阶段流程">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 900" width="1220" height="900" role="img" aria-label="Hana VibeCoding 开发脚手架：两大支柱、三档分流与三步视图">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#fdfaf6"/>
@@ -14,168 +14,140 @@
     <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
       <path d="M0,0 L7,3 L0,6 Z" fill="#c2703d"/>
     </marker>
-    <marker id="arrLoop" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa89a"/>
-    </marker>
   </defs>
 
-  <rect width="1220" height="800" fill="url(#bg)"/>
+  <rect width="1220" height="900" fill="url(#bg)"/>
 
-  <!-- 标题 -->
-  <g transform="translate(48 44)">
+  <!-- ===== 标题 ===== -->
+  <g transform="translate(48 40)">
     <rect x="0" y="0" width="40" height="40" rx="12" fill="url(#tile)"/>
     <path d="M12 27 L20 12 L28 27 M15.5 22 L24.5 22" stroke="#fdfaf6" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="54" y="20" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="20" font-weight="600" fill="#2f2a24">Hana VibeCoding 开发脚手架</text>
-    <text x="54" y="40" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" fill="#8d8274">官方 skill 教你「怎么写」，这套流程负责「带你写完」</text>
+    <text x="54" y="40" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" fill="#8d8274">官方 skill 教你「怎么写」，这套流程负责「带你写完」——先分档，再谈流程</text>
   </g>
 
   <!-- ===== 两大支柱 ===== -->
-  <g transform="translate(48 116)">
-    <rect x="0" y="0" width="1124" height="92" rx="16" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
-    <!-- 支柱 A -->
-    <g transform="translate(24 20)">
+  <g transform="translate(48 112)">
+    <rect x="0" y="0" width="1124" height="88" rx="16" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
+    <g transform="translate(24 18)">
       <rect x="0" y="0" width="34" height="34" rx="10" fill="#fbf1e6"/>
       <path d="M11 12 h12 M11 17 h12 M11 22 h8" stroke="#b0653a" stroke-width="2" stroke-linecap="round"/>
       <text x="48" y="15" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13.5" font-weight="600" fill="#2f2a24">支柱 A · 接口与能力对照表</text>
       <text x="48" y="34" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">能力词 + SDK 方法 + 示例 + 坑点，AI 拿着直接调，不用翻源码</text>
     </g>
-    <line x1="556" y1="16" x2="556" y2="76" stroke="#ece0d0" stroke-width="1.5"/>
-    <!-- 支柱 B -->
-    <g transform="translate(576 20)">
-      <rect x="0" y="0" width="34" height="34" rx="10" fill="#eef3ee"/>
-      <path d="M12 22 l5-12 l5 12 M13.5 18.5 h7" stroke="#3c7e78" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="48" y="15" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13.5" font-weight="600" fill="#2f2a24">支柱 B · 五阶段开发流程</text>
-      <text x="48" y="34" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">从想清目标到上传收尾，每步有引导、有产出、有小检验</text>
-    </g>
-    <!-- 底部小字 -->
-    <text x="24" y="82" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#a89c8c">定位：补充官方 hana-app-creator（那份是技术规格字典），不重复它已写清的内容，只做链接跳转</text>
-  </g>
-
-  <!-- ===== 五阶段流程 ===== -->
-  <g transform="translate(48 244)">
-    <text x="0" y="0" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="600" fill="#8d8274">五阶段 · 走一遍拿到五份东西</text>
-
-    <!-- 阶段卡：横排 5 个 -->
-    <g transform="translate(0 20)">
-      <!-- ① 目标 -->
-      <g transform="translate(0 0)">
-        <rect x="0" y="0" width="208" height="168" rx="14" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
-        <rect x="0" y="0" width="208" height="42" rx="14" fill="#fbf1e6"/><rect x="0" y="30" width="208" height="12" fill="#fbf1e6"/>
-        <circle cx="22" cy="21" r="11" fill="#c2703d"/><text x="22" y="26" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="700" fill="#fff">1</text>
-        <text x="42" y="26" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="14" font-weight="600" fill="#b0653a">目标</text>
-        <text x="18" y="66" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#6f6659">借鉴 Qoder 目标模式</text>
-        <text x="18" y="86" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#6f6659">用提问逼清五要素：</text>
-        <text x="18" y="106" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">专家角色 · 开发目标</text>
-        <text x="18" y="124" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">背景资料 · 大致步骤 · 限制</text>
-        <rect x="18" y="136" width="172" height="22" rx="7" fill="#fbf1e6"/>
-        <text x="26" y="151" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#b0653a">产出：目标说明书</text>
-      </g>
-
-      <!-- 箭头 -->
-      <path d="M214 84 L238 84" stroke="#c2703d" stroke-width="2.4" marker-end="url(#arr)"/>
-
-      <!-- ② 计划 -->
-      <g transform="translate(246 0)">
-        <rect x="0" y="0" width="208" height="168" rx="14" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
-        <rect x="0" y="0" width="208" height="42" rx="14" fill="#fbf1e6"/><rect x="0" y="30" width="208" height="12" fill="#fbf1e6"/>
-        <circle cx="22" cy="21" r="11" fill="#c2703d"/><text x="22" y="26" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="700" fill="#fff">2</text>
-        <text x="42" y="26" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="14" font-weight="600" fill="#b0653a">计划</text>
-        <text x="18" y="66" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#6f6659">借鉴 Qoder 计划模式</text>
-        <text x="18" y="86" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#6f6659">拆成小而能完成的步骤</text>
-        <text x="18" y="106" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">不求复杂，只求做得完</text>
-        <text x="18" y="124" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">确认后才执行</text>
-        <rect x="18" y="136" width="172" height="22" rx="7" fill="#fbf1e6"/>
-        <text x="26" y="151" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#b0653a">产出：开发计划</text>
-      </g>
-
-      <path d="M460 84 L484 84" stroke="#c2703d" stroke-width="2.4" marker-end="url(#arr)"/>
-
-      <!-- ③ 雏形与验收 -->
-      <g transform="translate(492 0)">
-        <rect x="0" y="0" width="208" height="168" rx="14" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
-        <rect x="0" y="0" width="208" height="42" rx="14" fill="#fbf1e6"/><rect x="0" y="30" width="208" height="12" fill="#fbf1e6"/>
-        <circle cx="22" cy="21" r="11" fill="#c2703d"/><text x="22" y="26" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="700" fill="#fff">3</text>
-        <text x="42" y="26" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="14" font-weight="600" fill="#b0653a">雏形与验收</text>
-        <text x="18" y="66" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#6f6659">按计划分步执行</text>
-        <text x="18" y="86" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#6f6659">每步后做「小检验」</text>
-        <text x="18" y="106" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">不拖慢整体进度</text>
-        <rect x="18" y="120" width="172" height="38" rx="7" fill="#fbf1e6"/>
-        <text x="26" y="136" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#b0653a">产出：改动清单</text>
-        <text x="26" y="151" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#b0653a">　　　可执行验收清单</text>
-      </g>
-
-      <path d="M706 84 L730 84" stroke="#c2703d" stroke-width="2.4" marker-end="url(#arr)"/>
-
-      <!-- ④ 清理与优化 -->
-      <g transform="translate(738 0)">
-        <rect x="0" y="0" width="208" height="168" rx="14" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
-        <rect x="0" y="0" width="208" height="42" rx="14" fill="#fbf1e6"/><rect x="0" y="30" width="208" height="12" fill="#fbf1e6"/>
-        <circle cx="22" cy="21" r="11" fill="#c2703d"/><text x="22" y="26" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="700" fill="#fff">4</text>
-        <text x="42" y="26" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="14" font-weight="600" fill="#b0653a">清理与优化</text>
-        <text x="18" y="66" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#6f6659">清无用/冗余/冲突</text>
-        <text x="18" y="86" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#6f6659">资深全栈视角重构</text>
-        <text x="18" y="106" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">全面自检：样式功能不变</text>
-        <rect x="18" y="120" width="172" height="38" rx="7" fill="#fbf1e6"/>
-        <text x="26" y="136" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#b0653a">产出：优化报告</text>
-        <text x="26" y="151" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#b0653a">　　　（再给一次清单）</text>
-      </g>
-
-      <path d="M952 84 L976 84" stroke="#c2703d" stroke-width="2.4" marker-end="url(#arr)"/>
-
-      <!-- ⑤ 保存与上传 -->
-      <g transform="translate(984 0)">
-        <rect x="0" y="0" width="188" height="168" rx="14" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
-        <rect x="0" y="0" width="188" height="42" rx="14" fill="#eef3ee"/><rect x="0" y="30" width="188" height="12" fill="#eef3ee"/>
-        <circle cx="22" cy="21" r="11" fill="#3c7e78"/><text x="22" y="26" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="700" fill="#fff">5</text>
-        <text x="42" y="26" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="14" font-weight="600" fill="#3c7e78">保存与上传</text>
-        <text x="16" y="66" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#6f6659">有 GitHub：写 README</text>
-        <text x="16" y="84" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">简介/特色/用法/更新</text>
-        <text x="16" y="102" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">+ 视情况插卡片图</text>
-        <text x="16" y="122" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#6f6659">没有：有序存文件夹</text>
-        <rect x="16" y="136" width="156" height="22" rx="7" fill="#eef3ee"/>
-        <text x="24" y="151" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#3c7e78">产出：README / 归档</text>
-      </g>
-    </g>
-
-    <!-- 小检验回环：③ 下方 → ② -->
-    <path d="M596 208 L596 232 L350 232 L350 208" stroke="#9aa89a" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#arrLoop)"/>
-    <text x="473" y="248" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#7d8a7d">小检验不过 → 回到计划调整（不推倒重来）</text>
-  </g>
-
-  <!-- ===== 贯穿带 ===== -->
-  <g transform="translate(48 528)">
-    <rect x="0" y="0" width="1124" height="60" rx="14" fill="#fff8ef" stroke="#e8d9c4"/>
-    <rect x="0" y="0" width="5" height="60" rx="2.5" fill="#c2703d"/>
-    <text x="24" y="26" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="600" fill="#b0653a">贯穿全程 · 目标不清就先给选项</text>
-    <text x="24" y="46" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#6f6659">用户对开发目标/规划不明确时，主动提供几个可能方向，帮其拓展思路、明晰需求，而不是干等答案</text>
-  </g>
-
-  <!-- ===== 底部：三条规则 ===== -->
-  <g transform="translate(48 616)">
-    <g transform="translate(0 0)">
-      <rect x="0" y="0" width="362" height="72" rx="14" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
-      <circle cx="26" cy="26" r="13" fill="#fbf1e6"/><text x="26" y="31" text-anchor="middle" font-size="12" fill="#b0653a">🤝</text>
-      <text x="48" y="22" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="600" fill="#2f2a24">可派子 Agent</text>
-      <text x="48" y="42" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">范围大/可并行的活并行处理</text>
-      <text x="48" y="58" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">主上下文不被淹没，主线思路不受扰</text>
-    </g>
-    <g transform="translate(381 0)">
-      <rect x="0" y="0" width="362" height="72" rx="14" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
-      <circle cx="26" cy="26" r="13" fill="#fbf1e6"/><text x="26" y="31" text-anchor="middle" font-size="12" fill="#b0653a">✅</text>
-      <text x="48" y="22" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="600" fill="#2f2a24">上传需你同意</text>
-      <text x="48" y="42" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">一般不主动推送；等验完没问题</text>
-      <text x="48" y="58" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">你说可以，才传上去</text>
-    </g>
-    <g transform="translate(762 0)">
-      <rect x="0" y="0" width="362" height="72" rx="14" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
-      <circle cx="26" cy="26" r="13" fill="#fbf1e6"/><text x="26" y="31" text-anchor="middle" font-size="12" fill="#b0653a">🖼️</text>
-      <text x="48" y="22" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="600" fill="#2f2a24">统一封面签名</text>
-      <text x="48" y="42" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">卡片中心画一张「一看就知道是我们的」封面</text>
-      <text x="48" y="58" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8d8274">深色圆角方块 + 极简符号，尺寸自适应</text>
+    <line x1="556" y1="14" x2="556" y2="74" stroke="#ece0d0" stroke-width="1.5"/>
+    <g transform="translate(580 18)">
+      <rect x="0" y="0" width="34" height="34" rx="10" fill="#eef4ec"/>
+      <path d="M9 13 h16 M9 19 h11 M9 25 h6" stroke="#5f8a5f" stroke-width="2.4" stroke-linecap="round"/>
+      <text x="48" y="15" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13.5" font-weight="600" fill="#2f2a24">支柱 B · 分档开发流程</text>
+      <text x="48" y="34" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">同一套流程套所有任务才是「重」的根源——按分量选档，只呈现三步</text>
     </g>
   </g>
 
-  <!-- 底部注脚 -->
-  <text x="48" y="728" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#a89c8c">方法论来源：吸收 Qoder 开发类 skill 的精华（拆分标准 / 根因调试 / 无偏审查 / 代码原则 / 设计 / 架构 / 版本）</text>
-  <text x="48" y="752" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#a89c8c">定位：补充官方 hana-app-creator（不替代）　|　形态：独立 skill（hana-vibecoding）　|　骨架可迁移，不止用于 App</text>
+  <!-- ===== 三档分流 ===== -->
+  <g transform="translate(48 232)">
+    <text x="0" y="16" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="14" font-weight="600" fill="#2f2a24">① 先分档：三档分流</text>
+    <text x="1124" y="16" text-anchor="end" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">拿不准按 T1 · 做着撑不住当场升档</text>
+
+    <!-- T0 -->
+    <g transform="translate(0 34)">
+      <rect x="0" y="0" width="1124" height="72" rx="14" fill="#ffffff" stroke="#dfe8dd" filter="url(#soft)"/>
+      <rect x="18" y="16" width="86" height="40" rx="11" fill="#eef4ec"/>
+      <text x="61" y="34" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#4c734c">T0</text>
+      <text x="61" y="49" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#6d8a6d">直改</text>
+      <text x="120" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">文案 / 颜色 / 位置明确的 bug（不碰逻辑分支）</text>
+      <text x="120" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#2f2a24">改 → 验</text>
+      <text x="640" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">产出物</text>
+      <text x="640" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">无</text>
+      <text x="820" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">确认点</text>
+      <text x="820" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#4c734c">0 个</text>
+      <text x="1000" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">提交</text>
+      <text x="1000" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">不要求</text>
+    </g>
+
+    <!-- T1 -->
+    <g transform="translate(0 116)">
+      <rect x="0" y="0" width="1124" height="72" rx="14" fill="#ffffff" stroke="#f0dcc8" filter="url(#soft)"/>
+      <rect x="18" y="16" width="86" height="40" rx="11" fill="#fbf1e6"/>
+      <text x="61" y="34" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#a95c2f">T1</text>
+      <text x="61" y="49" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#bd7b4c">单点</text>
+      <text x="120" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">一个功能，主要动 1–2 个文件</text>
+      <text x="120" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#2f2a24">①+② 合并 → ③ → ⑤</text>
+      <text x="640" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">产出物</text>
+      <text x="640" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">改动说明（写在回复里）</text>
+      <text x="820" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">确认点</text>
+      <text x="820" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#a95c2f">1 个</text>
+      <text x="1000" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">提交</text>
+      <text x="1000" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">完工一次</text>
+    </g>
+
+    <!-- T2 -->
+    <g transform="translate(0 198)">
+      <rect x="0" y="0" width="1124" height="72" rx="14" fill="#ffffff" stroke="#e2dcd4" filter="url(#soft)"/>
+      <rect x="18" y="16" width="86" height="40" rx="11" fill="#f3ece3"/>
+      <text x="61" y="34" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#3a332c">T2</text>
+      <text x="61" y="49" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#6d6459">完整</text>
+      <text x="120" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">新 App / 多模块 / 有取舍</text>
+      <text x="120" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#2f2a24">①+② → ③ → ④(可选) → ⑤</text>
+      <text x="640" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">产出物</text>
+      <text x="640" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">目标与计划 + 验收 + README</text>
+      <text x="820" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">确认点</text>
+      <text x="820" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#3a332c">2 个</text>
+      <text x="1000" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">提交</text>
+      <text x="1000" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">阶段收口</text>
+    </g>
+  </g>
+
+  <!-- ===== 三步视图 ===== -->
+  <g transform="translate(48 560)">
+    <text x="0" y="16" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="14" font-weight="600" fill="#2f2a24">② 内部五个阶段，对用户只呈现三步</text>
+    <text x="1124" y="16" text-anchor="end" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">中间不逐步汇报 · 只在交接处给一次小结</text>
+
+    <!-- 步骤 1 -->
+    <g transform="translate(0 34)">
+      <rect x="0" y="0" width="348" height="150" rx="16" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
+      <circle cx="34" cy="34" r="15" fill="#fbf1e6"/>
+      <text x="34" y="39" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#a95c2f">1</text>
+      <text x="60" y="39" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13.5" font-weight="600" fill="#2f2a24">想清楚</text>
+      <text x="20" y="72" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">①目标 + ②计划</text>
+      <text x="20" y="92" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">一次对话 · 一次确认</text>
+      <line x1="20" y1="110" x2="328" y2="110" stroke="#f2e8dc" stroke-width="1.2"/>
+      <text x="20" y="132" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" font-weight="600" fill="#2f2a24">产出：《目标与计划》</text>
+    </g>
+    <path d="M356 109 h24" stroke="#c2703d" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- 步骤 2 -->
+    <g transform="translate(388 34)">
+      <rect x="0" y="0" width="348" height="150" rx="16" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
+      <circle cx="34" cy="34" r="15" fill="#fbf1e6"/>
+      <text x="34" y="39" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#a95c2f">2</text>
+      <text x="60" y="39" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13.5" font-weight="600" fill="#2f2a24">做与验收</text>
+      <text x="20" y="72" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">③雏形与验收</text>
+      <text x="20" y="92" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">分步做 · 每步小检验 · 过一步提一次</text>
+      <line x1="20" y1="110" x2="328" y2="110" stroke="#f2e8dc" stroke-width="1.2"/>
+      <text x="20" y="132" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" font-weight="600" fill="#2f2a24">产出：改动清单 + 验收清单</text>
+    </g>
+    <path d="M744 109 h24" stroke="#c2703d" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- 步骤 3 -->
+    <g transform="translate(776 34)">
+      <rect x="0" y="0" width="348" height="150" rx="16" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
+      <circle cx="34" cy="34" r="15" fill="#fbf1e6"/>
+      <text x="34" y="39" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#a95c2f">3</text>
+      <text x="60" y="39" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13.5" font-weight="600" fill="#2f2a24">收尾</text>
+      <text x="20" y="72" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">④清扫（可选）→ ⑤交付</text>
+      <text x="20" y="92" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">push → tag → push --tags → release</text>
+      <line x1="20" y1="110" x2="328" y2="110" stroke="#f2e8dc" stroke-width="1.2"/>
+      <text x="20" y="132" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" font-weight="600" fill="#2f2a24">产出：README + zip Release</text>
+    </g>
+  </g>
+
+  <!-- ===== 底线 ===== -->
+  <g transform="translate(48 772)">
+    <rect x="0" y="0" width="1124" height="62" rx="16" fill="#3a332c" filter="url(#soft)"/>
+    <text x="28" y="26" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="600" fill="#fdfaf6">底线不动：每档都保留「改完必自验、交付前必自查」</text>
+    <text x="28" y="46" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#d7cbbd">通过清单 · 根因调试铁律 · 无偏审查 · Git 证据链 · 历史纪律 —— 省掉的是文档和仪式，不是验证</text>
+  </g>
+
+  <text x="610" y="872" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#a89b8b">hana-vibecoding v0.4.0 · 流程分档 + 三步视图 + 模板 6→5</text>
 </svg>
