@@ -287,7 +287,7 @@ node scripts/validate_app.mjs --archive <zip> --json     # 校验产物
 | `hana-app-creator`（官方） | App 开发技术规格（本文的"字典"） | 补充，非替代 |
 | `skill-creator`（官方） | 造 skill、跑 eval、优化 description | 要下沉开发流程为 skill 时用 |
 | `recipe-creator`（官方） | 把卡片模式提炼成可复用 Recipe | 同类卡片第二次出现时用 |
-| `hana-app-devkit`（本套） | 五阶段流程 + 本对照表 | — |
+| `hana-vibecoding`（本套） | 五阶段流程 + 本对照表 | — |
 
 ### D7. 一个关键事实：App 自带 skill 是"隐藏"的
 
