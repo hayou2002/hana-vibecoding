@@ -43,7 +43,9 @@
 | ④ | 清理与优化 | 优化报告 | 代码原则 P1–P10、架构视角 |
 | ⑤ | 保存与上传 | README / 归档 | 交付自检、版本沉淀 |
 
-**流程要轻**：①③④⑤ 默认必经，② 可轻量。顺畅时不停下来汇报，只在"卡住 / 要决策 / 用户要求"时问。
+**流程要轻**：一句话能改完的小活走「轻量通道」（③→⑤）；正常功能开发走全流程 ①→⑤；说不清多大就先问一句。顺畅时不停下来汇报，只在"卡住 / 要决策 / 用户要求"时问。
+
+每阶段末尾都有一份 **3–5 条的通过清单**——短到能当场核对，不达标不进下一阶段。
 
 ## 方法论从哪来
 
@@ -106,17 +108,21 @@ hana-vibecoding/
 
 ## 安装
 
+**方式一（推荐）**：从 [Releases](https://github.com/hayou2002/hana-vibecoding/releases) 下最新的 `hana-vibecoding-x.y.z.zip`，解包后在扩展管理界面点"本地安装"选中 `hana-vibecoding/` 目录（或走下面的命令）。
+
+**方式二**：直接用本仓库里的源码目录（相当于自带最新版）。
+
 **必须走扩展安装流程**，不能只复制文件夹——引擎认的是安装记录，光丢文件列表里看不见（踩过这个坑）。
 
 在 Hana 里：
 
 ```
-extension_manager install kind=skill source={type:"local", path:"<此仓库>/skill/hana-vibecoding"}
+extension_manager install kind=skill source={type:"local", path:"<skill 目录>/hana-vibecoding"}
 # → 拿到 stagedId
 extension_manager confirm stagedId=<上一步的 id>
 ```
 
-或在扩展管理界面点"本地安装"选 `skill/hana-vibecoding/` 目录。
+**这个 skill 默认不开启**（`default-enabled: false`）——它只在你要做 App 时被拉进来，平时不占你的上下文。
 
 ## 与官方 skill 的关系
 
@@ -135,6 +141,22 @@ python <skill-creator>/scripts/quick_validate.py skill/hana-vibecoding
 ```
 
 ## 更新内容
+
+### v0.3.0
+**减重 + 把方法论变成硬卡点。**
+
+- **默认不开启**（`default-enabled: false`）。之前它是唯一一直挂着的 skill，现在只在真正做 App 时才拉进来。
+- **新增 §0 加载协议**：同一轮里最多读一份 references，能只读一节就不读全文；`api-capabilities.md`、`methods.md` 都配了「先 grep 拿行号、再只读那节」的两步法。
+- **新增 §0.1 按分量走**：一句话能改完的小活走「轻量通道」（③→⑤），不再一律上全流程——这是回应"跑起来重"。
+- **每阶段新增「通过清单」**：3–5 条，短到能当场核对。方法论不再指望"按需读"，而是在阶段里当场卡。
+  > 依据：Qoder 那边的实测显示，`create-plan`/`systematic-debugging`/`requesting-code-review`/`analyze-code` 四个方法论类 skill 使用次数全是 0——"有但不强制"就是不会用。
+- **新增 §Git 使用规范（贯穿 ③④⑤）**：
+  - ③ 每过一个小检验 → 一次 commit，`git diff --stat` 直接当改动清单
+  - ④ 优化**前后各一次** commit，`git diff 前..后` 就是"功能没变"的铁证
+  - ⑤ `push → tag → push --tags → release`（顺序不能反）
+  - 回复里必须用「命令 + `→` 结果」标出用了什么，不能只说"我提交了"
+- **新增历史纪律**：`main` 上只留「每个版本一次提交 + 一张 tag」，开发碎提交 squash 掉；已公开的仓库不改写历史。
+- Releases 附 zip，下载即装，不用自己 clone 再打包。
 
 ### v0.2.0
 - 改名：`hana-app-devkit` → `hana-vibecoding`（面向 vibe coding，点明受众）
