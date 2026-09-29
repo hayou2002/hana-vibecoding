@@ -1,7 +1,7 @@
 # Hana App 接口与能力对照表（任务导向）
 
 > **用法**：带着"我要做 X"来查。查到后照抄能力词与 SDK 方法，别再翻源码。
-> **权威依据**：`api-capabilities.md`（本目录，70 能力词全表）+ 官方 `hana-app-creator` skill。冲突时以官方为准。
+> **权威依据**：`caps/`（`api-capabilities.md` 的分节生成物，按域整读，见 `caps/INDEX.md`）+ 官方 `hana-app-creator` skill。冲突时以官方为准。
 > **标注约定**：能力词 = manifest 里 `permissions` 要写的；SDK 方法 = 代码里调的。所有方法名都已核对源码。
 
 ---

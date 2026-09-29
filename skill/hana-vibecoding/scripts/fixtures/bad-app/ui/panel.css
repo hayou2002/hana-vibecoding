@@ -1,0 +1,6 @@
+/* 反证样本：期望报 [hidden] 兜底缺失 WARN、裸旧主题变量 WARN */
+.toolbar {
+  display: flex;
+  background: var(--sidebar-bg); /* WARN：旧主题名，自定义主题不跟随 */
+}
+.badge { color: var(--brand-pink); } /* INFO：未定义且无 fallback */

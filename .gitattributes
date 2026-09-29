@@ -1,0 +1,5 @@
+# 统一换行：生成物/文档一律 LF，消除 Windows CRLF 噪音与幂等 diff 假阳性
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.svg text eol=lf

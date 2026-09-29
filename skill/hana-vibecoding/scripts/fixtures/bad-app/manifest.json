@@ -1,0 +1,8 @@
+﻿{
+  "id": "bad-app",
+  "name": "反证样本",
+  "version": "0.0.1",
+  "permissions": ["app/notifications.show", "app/tools.expose-to-model"],
+  "entry": "index.js",
+  "ui": "ui/panel.html"
+}
