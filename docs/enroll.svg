@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 468" width="1220" height="468" role="img" aria-label="⑤b 上架官方拓展市场：打包、正式 Release、登记 PR、审核合并四步闭环">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdfaf6"/>
+      <stop offset="1" stop-color="#f6ede2"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a332c"/>
+      <stop offset="1" stop-color="#1e1a16"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="7" flood-color="#5a4632" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#c2703d"/>
+    </marker>
+  </defs>
+
+  <rect width="1220" height="468" fill="url(#bg)"/>
+
+  <!-- ===== 标题 ===== -->
+  <g transform="translate(48 32)">
+    <rect x="0" y="0" width="36" height="36" rx="11" fill="url(#tile)"/>
+    <path d="M10 23 L18 9 L26 23 M13 19 L23 19" stroke="#fdfaf6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="50" y="17" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="18" font-weight="600" fill="#2f2a24">⑤b · 上架官方拓展市场（Global）</text>
+    <text x="50" y="36" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#8d8274">市场不收源码不收上传，只登记「packer 产物 + 正式 Release + 批准的 SHA-256」——合并即上架</text>
+  </g>
+
+  <!-- ===== 四步 ===== -->
+  <g transform="translate(48 92)">
+
+    <!-- 步骤 1 packer -->
+    <g transform="translate(0 0)">
+      <rect x="0" y="0" width="253" height="248" rx="16" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
+      <circle cx="32" cy="32" r="14" fill="#fbf1e6"/>
+      <text x="32" y="37" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="700" fill="#a95c2f">1</text>
+      <text x="56" y="37" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="600" fill="#2f2a24">官方 packer 出双产物</text>
+      <line x1="18" y1="56" x2="235" y2="56" stroke="#f2e8dc" stroke-width="1.2"/>
+      <text x="18" y="78" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#5d5348">extension-pack.mjs</text>
+      <text x="18" y="96" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">--kind app/skill/recipe/</text>
+      <text x="18" y="112" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">connector/role/bundle</text>
+      <text x="18" y="136" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#5d5348">产出 .entry.json + .zip</text>
+      <text x="18" y="154" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">内嵌图标 · 权限 · SHA-256</text>
+      <rect x="18" y="176" width="217" height="52" rx="10" fill="#faf3ec"/>
+      <text x="30" y="197" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" font-weight="600" fill="#8a4636">必须 packer 原生，同批成对</text>
+      <text x="30" y="215" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8a4636">手搓 zip / 源码归档都不算数</text>
+    </g>
+    <path d="M261 124 h28" stroke="#c2703d" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- 步骤 2 Release -->
+    <g transform="translate(297 0)">
+      <rect x="0" y="0" width="253" height="248" rx="16" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
+      <circle cx="32" cy="32" r="14" fill="#fbf1e6"/>
+      <text x="32" y="37" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="700" fill="#a95c2f">2</text>
+      <text x="56" y="37" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="600" fill="#2f2a24">你的公开仓库发 Release</text>
+      <line x1="18" y1="56" x2="235" y2="56" stroke="#f2e8dc" stroke-width="1.2"/>
+      <text x="18" y="78" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#5d5348">两个产物一起传为附件</text>
+      <text x="18" y="96" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">非草稿 · 非预发布 · 正式版</text>
+      <text x="18" y="114" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">tag 仅限字母数字 . _ + -</text>
+      <text x="18" y="138" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#5d5348">app：&lt;kind&gt;-&lt;id&gt;-&lt;ver&gt;.zip</text>
+      <text x="18" y="156" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#5d5348">skill/recipe：内容寻址命名</text>
+      <rect x="18" y="176" width="217" height="52" rx="10" fill="#faf3ec"/>
+      <text x="30" y="197" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" font-weight="600" fill="#8a4636">已发布附件永不可替换/删除</text>
+      <text x="30" y="215" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8a4636">要修就 bump 新版本重发一对</text>
+    </g>
+    <path d="M558 124 h28" stroke="#c2703d" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- 步骤 3 PR -->
+    <g transform="translate(594 0)">
+      <rect x="0" y="0" width="253" height="248" rx="16" fill="#ffffff" stroke="#e8dccc" filter="url(#soft)"/>
+      <circle cx="32" cy="32" r="14" fill="#fbf1e6"/>
+      <text x="32" y="37" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="700" fill="#a95c2f">3</text>
+      <text x="56" y="37" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="600" fill="#2f2a24">市场仓提登记 PR</text>
+      <line x1="18" y1="56" x2="235" y2="56" stroke="#f2e8dc" stroke-width="1.2"/>
+      <text x="18" y="78" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#5d5348">fork liliMozi/hana-marketplace</text>
+      <text x="18" y="96" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">同一 PR 只改两个 JSON：</text>
+      <text x="18" y="114" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">registry.json + approvals.json</text>
+      <text x="18" y="138" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#5d5348">sha256 照抄 entry · 勿自算</text>
+      <text x="18" y="156" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#5d5348">正文五段审阅材料 + 清单</text>
+      <rect x="18" y="176" width="217" height="52" rx="10" fill="#faf3ec"/>
+      <text x="30" y="197" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" font-weight="600" fill="#8a4636">一包一 PR · 别碰 index.v2.json</text>
+      <text x="30" y="215" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#8a4636">id 先查既有条目，不撞名</text>
+    </g>
+    <path d="M855 124 h28" stroke="#c2703d" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- 步骤 4 审核 -->
+    <g transform="translate(891 0)">
+      <rect x="0" y="0" width="253" height="248" rx="16" fill="#ffffff" stroke="#e2dcd4" filter="url(#soft)"/>
+      <circle cx="32" cy="32" r="14" fill="#eef4ec"/>
+      <text x="32" y="37" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="700" fill="#4c734c">4</text>
+      <text x="56" y="37" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="600" fill="#2f2a24">维护者审核合并 = 上架</text>
+      <line x1="18" y1="56" x2="235" y2="56" stroke="#f2e8dc" stroke-width="1.2"/>
+      <text x="18" y="78" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#5d5348">合并后发布工作流重生成</text>
+      <text x="18" y="96" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">index.v2.json（整批原子）</text>
+      <text x="18" y="114" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">客户端才搜得到 · 一键装</text>
+      <text x="18" y="138" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#5d5348">此后每次更新重走 1–3：</text>
+      <text x="18" y="156" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">改 approvals 的 tag + sha256</text>
+      <rect x="18" y="176" width="217" height="52" rx="10" fill="#eef4ec"/>
+      <text x="30" y="197" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" font-weight="600" fill="#4c734c">首审期间不发新版产物</text>
+      <text x="30" y="215" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#4c734c">审的是登记那一刻绑定的包</text>
+    </g>
+  </g>
+
+  <!-- ===== 底线 ===== -->
+  <g transform="translate(48 372)">
+    <rect x="0" y="0" width="1124" height="62" rx="16" fill="#3a332c" filter="url(#soft)"/>
+    <text x="28" y="26" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="600" fill="#fdfaf6">投稿前自查：manifestVersion 2 · 先构建 · connector 无凭据 · 已脱敏 · publisher 三处一致 · ≤50 MiB</text>
+    <text x="28" y="46" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#d7cbbd">上架是对外动作：发公开 Release、提 PR 前必须用户点头。细则见 references/market-enrollment.md，PR 正文用 templates/06-enroll.md</text>
+  </g>
+
+  <text x="610" y="456" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#a89b8b">口径唯一来源：hana-marketplace/CONTRIBUTING.md（Global 目录）· 中国大陆市场独立审核，不自动同步</text>
+</svg>

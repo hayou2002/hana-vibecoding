@@ -127,6 +127,10 @@ gh release create v0.3.0 ... <zip>        → 最后建 release，附 zip 资产
 
 详见 `references/methods.md` §5、§8。
 
+### ⑤b 上架官方拓展市场（用户点名才进）
+
+上面的 release 是发到作者仓库；让全体 Hana 用户在拓展市场里搜到并一键安装，走市场登记流程：**官方 packer 出双产物 → 公开仓库正式 Release（成对附件）→ 市场仓登记 PR（一包一 PR）→ 维护者合并即上架**。六种 kind 命名差异、预检命令、审核材料与更新纪律全部在 `references/market-enrollment.md`，PR 正文用 `templates/06-enroll.md`。两个最容易白跑的坑：zip 必须 packer 原生（手搓不算）、已发布附件永不可替换（要修就 bump 重发）。
+
 ## Git 使用规范（贯穿 ③④⑤）
 
 **别把 git 只当"存档"。它在本流程里是证据机**：每次提交 = 一个可回退的检查点；每次 `git diff` = 一份能摊开给人看的改动证据。

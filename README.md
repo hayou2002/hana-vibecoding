@@ -52,9 +52,19 @@
 |---|---|---|
 | **1 想清楚** | ①目标 + ②计划（一次对话、一次确认） | 《目标与计划》（含 3 条可判定成功标准） |
 | **2 做与验收** | ③雏形与验收 | 《交付单》一张纸（改动 + 验收合一） |
-| **3 收尾** | ④清扫（可选）→ ⑤交付 | README / release |
+| **3 收尾** | ④清扫（可选）→ ⑤交付 → ⑤b上架（可选） | README / release / 官方市场收录 |
 
 每阶段末尾有一份 **3–5 条的通过清单**，短到能当场核对，不达标不进下一阶段。**省掉的是文档和仪式，不是验证。**
+
+### ⑤b · 上架官方拓展市场（可选，用户点名才进）
+
+做完的东西怎么让所有 Hana 用户一键装到？跟着这套流程走一遍官方 Global 市场（`liliMozi/hana-marketplace`）的四步闭环——**不收源码不收上传，只登记「官方 packer 产物 + 正式 Release + 审核批准的 SHA-256」**：
+
+![上架四步闭环：packer 双产物 → 正式 Release → 登记 PR → 审核合并即上架](docs/enroll.svg)
+
+- 六种 kind（app / skill / recipe / connector / role / bundle）的命名差异、packer 定位与命令、预检脚本、PR 审阅材料五段、更新纪律，全在 `references/market-enrollment.md`；另附八条实战铁律（手搓 zip 不算数、bump 优于修补、打包非确定性、审核期不发新包……都是真踩过的坑）。
+- 登记 PR 正文用 `templates/06-enroll.md` 填空，对着官方模板五段+检查清单逐项可核。
+- 上架是**对外动作**：发公开 Release、提市场 PR 前必须用户点头，和「上传需同意」同一条红线。
 
 ## 方法论从哪来
 
@@ -95,7 +105,8 @@
 ```
 hana-vibecoding/
 ├── docs/
-│   ├── flow.svg            # 两大支柱：能力对照表 + 分档流程
+│   ├── flow.svg            # 三大支柱：能力对照表 + 分档流程 + 三步视图（含 ⑤b 徒章）
+│   ├── enroll.svg          # ⑤b 上架官方市场：四步闭环图
 │   └── layers.svg          # 通用层 / 专属层 分层图
 ├── skill/hana-vibecoding/  # ← 可直接安装的 skill 包（自包含）
 │   ├── SKILL.md            # 决策核：分档表/通过清单/贯穿规则（v0.5 起只留决策表，详文外移）
@@ -106,7 +117,8 @@ hana-vibecoding/
 │   │   ├── flow.md              # ⚡v0.5：五阶段详文（按需 grep 取节）
 │   │   ├── methods.md           # 方法论库（10 节，吸收自 Qoder + 对话纪律）
 │   │   ├── cover-guide.md       # 卡片封面统一签名规范
-│   │   └── dev-lessons.md       # 静默失败清单 + 自验方法
+│   │   ├── dev-lessons.md       # 静默失败清单 + 自验方法
+│   │   └── market-enrollment.md # ⚡⑤b：上架官方拓展市场全流程手册（含八条实战铁律）
 │   ├── scripts/                 # ⚡v0.5：知识从文档变门禁
 │   │   ├── check_app.mjs        # 静态门禁：静默失败坑的脚本化拦截（含反证 fixture）
 │   │   ├── build-caps.mjs       # caps/ 生成器（幂等）
@@ -116,14 +128,15 @@ hana-vibecoding/
 │       ├── 01-brief.md          # ① 目标与计划（含验收三栏确认）
 │       ├── 03-delivery.md       # ③ 交付单（改动+验收合一，原 03-changes/03-acceptance 合并）
 │       ├── 04-optimize.md       # ④ 优化报告
-│       └── 05-readme.md         # ⑤ README
+│       ├── 05-readme.md         # ⑤ README
+│       └── 06-enroll.md         # ⚡⑤b 上架登记 PR 正文模板
 ├── eval/tasks.md            # ⚡v0.5：行为基线三固定任务（轮次对拍，防"感觉变好了"）
 └── 需求梳理稿.md            # 需求来龙去脉（过程记录）
 ```
 
 ## 安装
 
-**方式一（推荐）**：从 [Releases](https://github.com/hayou2002/hana-vibecoding/releases) 下最新的 `hana-vibecoding-x.y.z.zip`，解包后在扩展管理界面点"本地安装"选中 `hana-vibecoding/` 目录（或走下面的命令）。
+**方式一（推荐）**：从 [Releases](https://github.com/hayou2002/hana-vibecoding/releases) 下最新的 `hana-vibecoding-x.y.z.zip`，解包后在扩展管理界面点"本地安装"选中 `hana-vibecoding/` 目录（或走下面的命令）。本套正在走官方拓展市场登记（见 ⑤b），收录后这里会多一种：市场里直接搜装。
 
 **方式二**：直接用本仓库里的源码目录（相当于自带最新版）。
 
@@ -160,6 +173,17 @@ node skill/hana-vibecoding/scripts/build-caps.mjs && git diff --stat
 ```
 
 ## 更新内容
+
+### v0.6.0（开发中，待市场首登审核后发布）
+**新增阶段⑤b：上架官方拓展市场。**
+
+- `references/market-enrollment.md`：全流程手册——六种 kind 命名差异、packer 定位与命令、四步闭环（出包→正式 Release→登记 PR→审核合并）、更新纪律、官方常见失败对照表，外加八条实战铁律（全部来自真实投稿踩坑）。
+- `templates/06-enroll.md`：登记 PR 正文模板，对齐官方五段+六项检查清单。
+- SKILL.md 主文挂载：description 触发词（上架/进市场）、§0 索引行、阶段⑤b 小节与通过清单；`docs/enroll.svg` 四步闭环图。
+- 口径唯一来源仍是官方 `CONTRIBUTING.md`，本手册是执行版摘要——分叉以官方为准。
+
+### v0.5.1
+**官方 packer 产物发布，提交 Hana Global 市场登记。**内容与 v0.5.0 相同；v0.5.0 的 zip 为手工打包不符合市场要求，故用 `extension-pack.mjs` 重出 entry+ZIP 成对发布（登记 PR 审核中）。
 
 ### v0.5.0
 **减重方向从"输入侧"转向"往返侧"——省 token 的真大头不在读，在轮次。**（依据：外部评审 v0.4.0 + 生态横向调研，2026-09-28）

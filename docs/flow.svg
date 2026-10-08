@@ -149,6 +149,11 @@
       <text x="20" y="92" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">push → tag → release · 版本纪律</text>
       <line x1="20" y1="110" x2="328" y2="110" stroke="#f2e8dc" stroke-width="1.2"/>
       <text x="20" y="132" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" font-weight="600" fill="#2f2a24">产出：README + zip Release</text>
+      <!-- ⑤b 上架徽标：贴卡片下缘 -->
+      <g transform="translate(150 138)">
+        <rect x="0" y="0" width="180" height="24" rx="12" fill="#f6ebe7" stroke="#d9b3a3" stroke-width="1.2"/>
+        <text x="90" y="16" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" font-weight="600" fill="#8a4636">⑤b 上架官方市场 · 可选</text>
+      </g>
     </g>
   </g>
 
@@ -159,5 +164,5 @@
     <text x="28" y="46" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#d7cbbd">通过清单 · 静态门禁 · 无偏复检 · Git 证据链 · 轮次墙 —— 省掉的是文档和仪式，不是验证</text>
   </g>
 
-  <text x="610" y="872" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#a89b8b">hana-vibecoding v0.5.0 · 验收前移 + 静态门禁 + 轮次预算墙 + dev-state + caps 拆分 + SKILL 拆层</text>
+  <text x="610" y="872" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#a89b8b">hana-vibecoding v0.5 · 验收前移 + 静态门禁 + 轮次预算墙 + dev-state + caps 拆分 + SKILL 拆层 · ⑤b 官方市场上架（开发中）</text>
 </svg>

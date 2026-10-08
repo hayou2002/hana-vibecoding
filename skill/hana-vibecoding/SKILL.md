@@ -1,6 +1,6 @@
 ---
 name: hana-vibecoding
-description: "面向 vibe coding 的 Hana App 开发脚手架：在官方 hana-app-creator 之上，五阶段流程（目标→计划→实现验收→清理→发布）陪你把想法做到发布，配硬性通过清单、轮次预算墙、静态检查门禁、Git 纪律与《能力对照表》。当用户想开发 / 制作 / 规划一个 Hana App、插件、卡片应用，或问「Hana 有什么能力」「怎么把想法做成 App」时使用。补充官方 hana-app-creator，不替代。"
+description: "面向 vibe coding 的 Hana App 开发脚手架：在官方 hana-app-creator 之上，五阶段流程（目标→计划→实现验收→清理→发布）陪你把想法做到发布，配硬性通过清单、轮次预算墙、静态检查门禁、Git 纪律与《能力对照表》；延伸支持上架官方拓展市场——按官方规则辅助投稿 app / skill / recipe / connector / role / bundle（打包、正式 Release、登记 PR、更新纪律）。当用户想开发 / 制作 / 规划一个 Hana App、插件、卡片应用，问「Hana 有什么能力」「怎么把想法做成 App」，或说「上架」「进市场」「投稿到拓展市场」时使用。补充官方 hana-app-creator，不替代。"
 compatibility: "只读引用官方 hana-app-creator 与宿主 card-guide，不打包任何运行时依赖。"
 metadata:
   default-enabled: false
@@ -26,8 +26,9 @@ metadata:
 | 某阶段怎么具体做 | `references/flow.md` | 10.5 KB | **只 grep 对应阶段那一节** |
 | ②③④ 要方法论 | `references/methods.md` | 15 KB | **只读对应小节**（文件头有索引） |
 | 排查静默失败 / 打包发布 | `references/dev-lessons.md` | 11 KB | 按需 |
+| 上架官方拓展市场 | `references/market-enrollment.md` | 9.2 KB | 整份一次，它自成闭环 |
 | 画卡片封面 | `references/cover-guide.md` | 2 KB | 整份 |
-| 各阶段产出 | `templates/00-dev-state` `01-brief` `03-delivery` `04-optimize` `05-readme` | 各 ≤1 KB | 到那一步再读 |
+| 各阶段产出 | `templates/00-dev-state` `01-brief` `03-delivery` `04-optimize` `05-readme` `06-enroll` | 各 ≤2 KB | 到那一步再读 |
 | 改完 App 源码 | `scripts/check_app.mjs` | — | 直接跑：`node scripts/check_app.mjs <app目录>`，ERROR 即修 |
 
 **硬规则**：同一轮里**最多读一份** references；能只读一节就不读全文；能不读就不读。
@@ -140,7 +141,18 @@ metadata:
 - [ ] 用户点头了才推
 - [ ] `push → tag → push --tags → release` 顺序没错，release 带 zip
 - [ ] `main` 上没有开发碎步提交
-- [ ] 版本号按上表纪律走，答得出"这版的新承诺"
+- [ ] 版本号按上表纪律走，答得出“这版的新承诺”
+
+## 阶段⑤b · 上架官方拓展市场〔第 3 步·收尾〕（**可选，用户点名才进**）
+
+把成果投稿进 Hana Global 市场（`liliMozi/hana-marketplace`），让所有用户一键安装。核心认知：**市场不收源码不收上传，只登记「官方 packer 产物 + 正式 Release + 审核批准的 SHA-256」**，四步：packer 出包（entry+ZIP 成对）→ 公开仓库发正式 Release → 市场仓登记 PR（registry+approvals 两文件，一包一 PR）→ 等维护者合并。六种 kind 的命名差异、预检命令、审核材料与八条实战铁律都在手册里，**进这一节先整读 `references/market-enrollment.md`**，PR 正文用 `templates/06-enroll.md` 填空。
+
+**通过清单**
+- [ ] packer 产物原生未篡改，entry↔zip 同批成对、哈希核对一致
+- [ ] Release 非草稿非预发布、两附件齐全；旧附件未动过（要修就 bump）
+- [ ] kind/id/publisher 三处一致，id 不撞市场既有条目
+- [ ] 已脱敏；审核材料与自测报告如实（未测注明）
+- [ ] 发公开 Release、提市场 PR 前用户点过头
 
 ---
 
