@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="title desc">
+  <title id="title">按风险选择质量门</title>
+  <desc id="desc">快速反馈经单测、集成、端到端、手动浏览器与部署回读逐渐增强。不是每项改动都跑所有检查，但验证必须覆盖本次主要风险。</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#F5EEDC"/><stop offset="1" stop-color="#E3EEE7"/></linearGradient>
+    <marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#C66B45"/></marker>
+    <style>text{font-family:'Segoe UI',sans-serif;fill:#173333}.box{font-size:20px;font-weight:700}.sub{font-size:15px;fill:#44615a}.cap{font-size:15px;font-weight:700;letter-spacing:1.5px}.accent{fill:#C66B45}.gold{fill:#E7C06A}.light{fill:#F5EEDC}</style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="69" class="cap accent">QUALITY GATES · PICK BY RISK</text>
+  <text x="60" y="124" font-size="42" font-weight="750">每一项检查都要回答一个风险</text>
+  <text x="62" y="160" font-size="18" fill="#44615a">不机械跑满矩阵；覆盖本次改动最可能失败的路径。</text>
+  <path d="M107 270H1086" stroke="#C66B45" stroke-width="4" marker-end="url(#arr)"/>
+  <g>
+    <circle cx="130" cy="270" r="19" fill="#173333"/><circle cx="334" cy="270" r="19" fill="#27564E"/><circle cx="538" cy="270" r="19" fill="#54836D"/><circle cx="742" cy="270" r="19" fill="#BD8B36"/><circle cx="946" cy="270" r="19" fill="#C66B45"/>
+  </g>
+  <g>
+    <rect x="55" y="320" width="155" height="120" rx="18" fill="#FFFDF7"/><text x="132" y="357" text-anchor="middle" class="box">Unit</text><text x="132" y="390" text-anchor="middle" class="sub">纯逻辑</text><text x="132" y="415" text-anchor="middle" class="sub">边界行为</text>
+    <rect x="255" y="320" width="155" height="120" rx="18" fill="#FFFDF7"/><text x="332" y="357" text-anchor="middle" class="box">Integration</text><text x="332" y="390" text-anchor="middle" class="sub">API / 数据库</text><text x="332" y="415" text-anchor="middle" class="sub">契约与权限</text>
+    <rect x="455" y="320" width="155" height="120" rx="18" fill="#FFFDF7"/><text x="532" y="357" text-anchor="middle" class="box">E2E</text><text x="532" y="390" text-anchor="middle" class="sub">关键用户旅程</text><text x="532" y="415" text-anchor="middle" class="sub">真实浏览器</text>
+    <rect x="655" y="320" width="175" height="120" rx="18" fill="#FFFDF7"/><text x="742" y="357" text-anchor="middle" class="box">Manual UI</text><text x="742" y="390" text-anchor="middle" class="sub">窄屏 / 键盘</text><text x="742" y="415" text-anchor="middle" class="sub">截图 / 状态反馈</text>
+    <rect x="855" y="320" width="182" height="120" rx="18" fill="#FFFDF7"/><text x="946" y="357" text-anchor="middle" class="box">Target read-back</text><text x="946" y="390" text-anchor="middle" class="sub">部署 / 线上变更</text><text x="946" y="415" text-anchor="middle" class="sub">目标侧回读</text>
+  </g>
+  <rect x="90" y="494" width="1020" height="72" rx="18" fill="#173333"/>
+  <text x="600" y="525" text-anchor="middle" class="gold" font-family="'Segoe UI',sans-serif" font-size="17" font-weight="700">BUILD PASS ≠ BROWSER PASS ≠ PRODUCTION HEALTH</text>
+  <text x="600" y="550" text-anchor="middle" class="light" font-family="'Segoe UI',sans-serif" font-size="16">每次只声明你亲自验证过的那一层</text>
+</svg>

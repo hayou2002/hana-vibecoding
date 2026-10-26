@@ -23,7 +23,7 @@
     <rect x="0" y="0" width="40" height="40" rx="12" fill="url(#tile)"/>
     <path d="M12 27 L20 12 L28 27 M15.5 22 L24.5 22" stroke="#fdfaf6" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="54" y="20" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="20" font-weight="600" fill="#2f2a24">Hana VibeCoding 开发脚手架</text>
-    <text x="54" y="40" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" fill="#8d8274">官方 skill 教你「怎么写」，这套流程负责「带你写完」——减重的大头不在读，在轮次</text>
+    <text x="54" y="40" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" fill="#8d8274">官方 skill 教你「怎么写」，这套流程负责「带你写完」——按风险分档，省的是仪式不是验证</text>
   </g>
 
   <!-- ===== 三大支柱 ===== -->
@@ -41,8 +41,8 @@
       <rect x="0" y="0" width="34" height="34" rx="10" fill="#eef4ec"/>
       <path d="M9 13 h16 M9 19 h11 M9 25 h6" stroke="#5f8a5f" stroke-width="2.4" stroke-linecap="round"/>
       <text x="46" y="15" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="600" fill="#2f2a24">支柱 B · 分档流程</text>
-      <text x="46" y="34" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">按分量选档，只呈现三步</text>
-      <text x="46" y="48" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#a89b8b">轮次预算墙拦返工 · dev-state 跨会话</text>
+      <text x="46" y="34" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">按风险选档，只呈现三步</text>
+      <text x="46" y="48" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#a89b8b">边界不清才问 · dev-state 按需维护</text>
     </g>
     <line x1="752" y1="14" x2="752" y2="74" stroke="#ece0d0" stroke-width="1.5"/>
     <g transform="translate(776 18)">
@@ -56,8 +56,8 @@
 
   <!-- ===== 三档分流 ===== -->
   <g transform="translate(48 232)">
-    <text x="0" y="16" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="14" font-weight="600" fill="#2f2a24">① 先分档：三档分流 + 轮次预算</text>
-    <text x="1124" y="16" text-anchor="end" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">拿不准按 T1 · 撑不住当场升档 · 超预算要先说明</text>
+    <text x="0" y="16" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="14" font-weight="600" fill="#2f2a24">① 先分档：按风险分三档，不按文件数</text>
+    <text x="1124" y="16" text-anchor="end" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">看行为·数据·权限·副作用 · 复杂度上升当场升档</text>
 
     <!-- T0 -->
     <g transform="translate(0 34)">
@@ -65,14 +65,14 @@
       <rect x="18" y="16" width="86" height="40" rx="11" fill="#eef4ec"/>
       <text x="61" y="34" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#4c734c">T0</text>
       <text x="61" y="49" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#6d8a6d">直改</text>
-      <text x="120" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">文案 / 颜色 / 位置明确的 bug（不碰逻辑分支）</text>
-      <text x="120" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#2f2a24">改 → 验</text>
+      <text x="120" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">局部变化，不碰行为、权限、数据与副作用</text>
+      <text x="120" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#2f2a24">直接改 → 相关检查</text>
       <text x="516" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">产出物</text>
-      <text x="516" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">无</text>
-      <text x="692" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">确认点</text>
-      <text x="692" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#4c734c">0 个</text>
-      <text x="876" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">预算 ≤3 轮 · 不过→重述目标</text>
-      <text x="876" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#6d6459">拦返工往返，不拦干活本身</text>
+      <text x="516" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">回复说明</text>
+      <text x="692" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">需澄清</text>
+      <text x="692" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#4c734c">无</text>
+      <text x="876" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">验证：与本次风险相称</text>
+      <text x="876" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#6d6459">不造计划 / dev-state / README</text>
     </g>
 
     <!-- T1 -->
@@ -81,14 +81,14 @@
       <rect x="18" y="16" width="86" height="40" rx="11" fill="#fbf1e6"/>
       <text x="61" y="34" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#a95c2f">T1</text>
       <text x="61" y="49" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#bd7b4c">单点</text>
-      <text x="120" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">一个功能，主要动 1–2 个文件</text>
-      <text x="120" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#2f2a24">①+② 合并（三句式对齐）→ ③ → ⑤</text>
+      <text x="120" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">一个边界清楚的行为，契约与验收路径明确</text>
+      <text x="120" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#2f2a24">实现一个垂直切片 → 针对风险验证</text>
       <text x="516" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">产出物</text>
-      <text x="516" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">改动说明（写在回复里）</text>
-      <text x="692" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">确认点</text>
-      <text x="692" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#a95c2f">1 个</text>
-      <text x="876" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">预算 ≤6 轮 · 墙：2 次理解偏→回①</text>
-      <text x="876" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#6d6459">dev-state 每轮先读后更新</text>
+      <text x="516" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">改动说明 + 验证与限制</text>
+      <text x="692" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">需澄清</text>
+      <text x="692" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#a95c2f">仅边界不清时</text>
+      <text x="876" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">验证：针对风险 + 证据分层</text>
+      <text x="876" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#6d6459">不强制写 brief、dev-state、README</text>
     </g>
 
     <!-- T2 -->
@@ -97,21 +97,21 @@
       <rect x="18" y="16" width="86" height="40" rx="11" fill="#f3ece3"/>
       <text x="61" y="34" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#3a332c">T2</text>
       <text x="61" y="49" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#6d6459">完整</text>
-      <text x="120" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">新 App / 多模块 / 有取舍</text>
-      <text x="120" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#2f2a24">①+② → ③ → ④(可选) → ⑤</text>
+      <text x="120" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">新 App / 多项取舍 / 触及能力·数据·外部副作用</text>
+      <text x="120" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#2f2a24">厘清边界与验收 → 短计划 → 分片实现</text>
       <text x="516" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">产出物</text>
-      <text x="516" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">目标书+交付单+README</text>
-      <text x="692" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">确认点</text>
-      <text x="692" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#3a332c">2 个</text>
-      <text x="876" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">预算 ≤15 轮 · 墙：3 次→回①</text>
-      <text x="876" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#6d6459">交付前无偏审查复检验收</text>
+      <text x="516" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" fill="#2f2a24">按需：计划+交付单</text>
+      <text x="692" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">需澄清</text>
+      <text x="692" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12" font-weight="600" fill="#3a332c">仅关键未决项</text>
+      <text x="876" y="31" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">验证：门禁 / 宿主实测 / 发布端回读</text>
+      <text x="876" y="52" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#6d6459">跨会话才建 dev-state · 独立复核按风险</text>
     </g>
   </g>
 
   <!-- ===== 三步视图 ===== -->
   <g transform="translate(48 560)">
     <text x="0" y="16" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="14" font-weight="600" fill="#2f2a24">② 内部五个阶段，对用户只呈现三步</text>
-    <text x="1124" y="16" text-anchor="end" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">中间不逐步汇报 · 只在交接处给一次小结</text>
+    <text x="1124" y="16" text-anchor="end" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11" fill="#8d8274">不强制固定轮次汇报 · 有决策或风险变化时同步</text>
 
     <!-- 步骤 1 -->
     <g transform="translate(0 34)">
@@ -119,10 +119,10 @@
       <circle cx="34" cy="34" r="15" fill="#fbf1e6"/>
       <text x="34" y="39" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#a95c2f">1</text>
       <text x="60" y="39" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13.5" font-weight="600" fill="#2f2a24">想清楚</text>
-      <text x="20" y="72" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">①目标 + ②计划 · 一次确认</text>
-      <text x="20" y="92" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">动手前钉死验收：偏差在第一步拦截</text>
+      <text x="20" y="72" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">①目标；有实质取舍时再做②计划</text>
+      <text x="20" y="92" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">先定可判定的验收，小改在对话里说清</text>
       <line x1="20" y1="110" x2="328" y2="110" stroke="#f2e8dc" stroke-width="1.2"/>
-      <text x="20" y="132" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" font-weight="600" fill="#2f2a24">产出：目标 + 3 条可判定标准 + 不做清单</text>
+      <text x="20" y="132" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" font-weight="600" fill="#2f2a24">产出：可判定验收 + T2《目标与计划》</text>
     </g>
     <path d="M356 109 h24" stroke="#c2703d" stroke-width="2" marker-end="url(#arr)"/>
 
@@ -132,10 +132,10 @@
       <circle cx="34" cy="34" r="15" fill="#fbf1e6"/>
       <text x="34" y="39" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#a95c2f">2</text>
       <text x="60" y="39" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13.5" font-weight="600" fill="#2f2a24">做与验收</text>
-      <text x="20" y="72" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">③雏形与验收 · 分步小检验</text>
-      <text x="20" y="92" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">改完先跑 check_app · dev-state 续接</text>
+      <text x="20" y="72" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">③雏形与验收 · 按风险验证</text>
+      <text x="20" y="92" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">改完先跑 check_app · 三层证据分开报</text>
       <line x1="20" y1="110" x2="328" y2="110" stroke="#f2e8dc" stroke-width="1.2"/>
-      <text x="20" y="132" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" font-weight="600" fill="#2f2a24">产出：《交付单》一张纸（改动+验收）</text>
+      <text x="20" y="132" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" font-weight="600" fill="#2f2a24">产出：较大任务《交付单》，小改回复说明</text>
     </g>
     <path d="M744 109 h24" stroke="#c2703d" stroke-width="2" marker-end="url(#arr)"/>
 
@@ -146,9 +146,9 @@
       <text x="34" y="39" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13" font-weight="700" fill="#a95c2f">3</text>
       <text x="60" y="39" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="13.5" font-weight="600" fill="#2f2a24">收尾</text>
       <text x="20" y="72" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#5d5348">④清扫（可选）→ ⑤交付</text>
-      <text x="20" y="92" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">push → tag → release · 版本纪律</text>
+      <text x="20" y="92" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#8d8274">push/tag/Release/PR 各自授权 · 顺序不反</text>
       <line x1="20" y1="110" x2="328" y2="110" stroke="#f2e8dc" stroke-width="1.2"/>
-      <text x="20" y="132" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" font-weight="600" fill="#2f2a24">产出：README + zip Release</text>
+      <text x="20" y="132" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" font-weight="600" fill="#2f2a24">产出：README / 安装包按需且获授权</text>
       <!-- ⑤b 上架徽标：贴卡片下缘 -->
       <g transform="translate(150 138)">
         <rect x="0" y="0" width="180" height="24" rx="12" fill="#f6ebe7" stroke="#d9b3a3" stroke-width="1.2"/>
@@ -160,9 +160,9 @@
   <!-- ===== 底线 ===== -->
   <g transform="translate(48 772)">
     <rect x="0" y="0" width="1124" height="62" rx="16" fill="#3a332c" filter="url(#soft)"/>
-    <text x="28" y="26" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="600" fill="#fdfaf6">底线不动：动手前钉死验收 · 改完必自验 · 交付前必自查</text>
-    <text x="28" y="46" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#d7cbbd">通过清单 · 静态门禁 · 无偏复检 · Git 证据链 · 轮次墙 —— 省掉的是文档和仪式，不是验证</text>
+    <text x="28" y="26" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="600" fill="#fdfaf6">底线不动：改完做与风险相称的验证 · 交付如实说明证据与未覆盖项</text>
+    <text x="28" y="46" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#d7cbbd">按风险分档 · 三层证据不互相冒充 · 外部动作各自授权 —— 省掉的是与任务无关的文档和仪式</text>
   </g>
 
-  <text x="610" y="872" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#a89b8b">hana-vibecoding v0.5 · 验收前移 + 静态门禁 + 轮次预算墙 + dev-state + caps 拆分 + SKILL 拆层 · ⑤b 官方市场上架（开发中）</text>
+  <text x="610" y="872" text-anchor="middle" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="10.5" fill="#a89b8b">hana-vibecoding v0.5.2 · 按风险分档 + 三层验证证据 + 外部动作各自授权 + 静态门禁 + caps 拆分 + SKILL 拆层 · ⑤b 官方市场上架</text>
 </svg>

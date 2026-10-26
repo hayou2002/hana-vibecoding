@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Codex Vibecoding mark">
+  <rect width="96" height="96" rx="26" fill="#173333"/>
+  <path d="M20 24h22c17 0 29 10 29 24S59 72 42 72H20" fill="none" stroke="#F3E9D5" stroke-width="7" stroke-linecap="round"/>
+  <path d="M20 48h37M47 37l12 11-12 11" fill="none" stroke="#E27A50" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="75" cy="24" r="5" fill="#E7C06A"/>
+</svg>

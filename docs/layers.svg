@@ -54,11 +54,11 @@
     <!-- 贯穿规则 -->
     <text x="24" y="178" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="12.5" font-weight="600" fill="#3c7e78">贯穿规则</text>
     <g transform="translate(24 190)" font-family="'Segoe UI','Microsoft YaHei',system-ui" font-size="11.5" fill="#6f6659">
-      <circle cx="5" cy="-4" r="3" fill="#3c7e78"/><text x="16" y="0">交付一张《交付单》（改动+验收合一）</text>
-      <circle cx="5" cy="22" r="3" fill="#3c7e78"/><text x="16" y="26">动手前先钉死验收（3 条可判定标准）</text>
-      <circle cx="5" cy="48" r="3" fill="#3c7e78"/><text x="16" y="52">dev-state 每轮先读后更新（跨会话）</text>
-      <circle cx="5" cy="74" r="3" fill="#3c7e78"/><text x="16" y="78">收集型活 ≥3 文件 → 默认派子 Agent</text>
-      <circle cx="5" cy="100" r="3" fill="#3c7e78"/><text x="16" y="104">反证自检 · 能力不够主动去找去装</text>
+      <circle cx="5" cy="-4" r="3" fill="#3c7e78"/><text x="16" y="0">较大任务交付一张《交付单》（改动+验收）</text>
+      <circle cx="5" cy="22" r="3" fill="#3c7e78"/><text x="16" y="26">验收标准可判定（T2 才对齐目标与不做项）</text>
+      <circle cx="5" cy="48" r="3" fill="#3c7e78"/><text x="16" y="52">dev-state 仅跨会话 / 长任务 / 交接时维护</text>
+      <circle cx="5" cy="74" r="3" fill="#3c7e78"/><text x="16" y="78">独立复核按风险与资源可用性启用</text>
+      <circle cx="5" cy="100" r="3" fill="#3c7e78"/><text x="16" y="104">反证自检 · 外部动作各自授权 · 能力不够主动去找去装</text>
     </g>
   </g>
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Codex Vibecoding"
+  short_description: "Build and verify full-stack features with Codex"
+  icon_small: "./assets/flow-mark.svg"
+  icon_large: "./assets/flow-mark.svg"
+  brand_color: "#D16B45"
+  default_prompt: "Use $codex-vibecoding to turn this feature request into a tested implementation that follows the existing project conventions."

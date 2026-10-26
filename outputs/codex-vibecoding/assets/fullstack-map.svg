@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="title desc">
+  <title id="title">全栈功能的信任与数据流</title>
+  <desc id="desc">浏览器 UI 通过 HTTPS 调用 API；API 服务器负责身份、授权、验证与业务逻辑；领域服务通过数据访问层读取数据库或外部服务。数据库密钥和权限留在服务端。</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#F4EFDF"/><stop offset="1" stop-color="#E4EEE8"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#CC6B45"/></marker>
+    <filter id="shadow" x="-15%" y="-20%" width="130%" height="145%"><feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#173333" flood-opacity=".12"/></filter>
+    <style>text{font-family:'Segoe UI',sans-serif;fill:#173333}.head{font-size:25px;font-weight:700}.small{font-size:17px;fill:#46645B}.cap{font-size:15px;font-weight:700;letter-spacing:1.4px}.accent{fill:#C66B45}.light{fill:#F4EFDF}.muted-light{fill:#D5E3D9}</style>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <text x="62" y="67" class="cap accent">THE TRUST BOUNDARIES</text>
+  <text x="62" y="119" font-size="43" font-weight="750">一条全栈切片，穿过四层关键边界</text>
+  <text x="62" y="154" class="small">箭头是数据流；虚线框是信任边界。用户输入与客户端状态都不可信。</text>
+
+  <rect x="42" y="210" width="287" height="444" rx="26" fill="#DDEBE5" stroke="#8DAE9F" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="70" y="250" class="cap" fill="#39806B">UNTRUSTED CLIENT</text>
+  <g filter="url(#shadow)"><rect x="72" y="289" width="228" height="127" rx="20" fill="#FFFDF7"/></g>
+  <text x="186" y="333" class="head" text-anchor="middle">UI / 浏览器</text><text x="186" y="369" class="small" text-anchor="middle">表单 · 加载态 · 错误态</text><text x="186" y="396" class="small" text-anchor="middle">不存 server secret</text>
+  <rect x="72" y="462" width="228" height="136" rx="18" fill="#F1E3CF"/>
+  <text x="186" y="500" class="cap" text-anchor="middle">USER INPUT</text><text x="186" y="535" class="small" text-anchor="middle">可篡改 · 可重放</text><text x="186" y="565" class="small" text-anchor="middle">客户端验证只为体验</text>
+
+  <path d="M330 351h103" stroke="#CC6B45" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="381" y="331" class="cap" text-anchor="middle" fill="#A04B31">HTTPS / API</text>
+
+  <rect x="444" y="210" width="401" height="444" rx="26" fill="#F2E5D6" stroke="#D3A880" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="473" y="250" class="cap" fill="#A05A35">TRUSTED SERVER</text>
+  <g filter="url(#shadow)"><rect x="475" y="289" width="337" height="141" rx="20" fill="#173333"/></g>
+  <text x="644" y="332" class="head light" text-anchor="middle">API / Route Handler</text><text x="644" y="370" class="small muted-light" text-anchor="middle">schema validation · rate limit</text><text x="644" y="400" class="small muted-light" text-anchor="middle">authn → authz → ownership</text>
+  <rect x="475" y="468" width="337" height="131" rx="18" fill="#E6C873"/>
+  <text x="644" y="505" class="cap" text-anchor="middle">DOMAIN / DATA ACCESS</text><text x="644" y="542" class="small" text-anchor="middle">业务不变量 · 参数化查询</text><text x="644" y="572" class="small" text-anchor="middle">错误映射 · 幂等/事务</text>
+
+  <text x="893" y="331" class="cap" text-anchor="middle" fill="#A04B31">SERVER ONLY</text>
+
+  <g filter="url(#shadow)"><rect x="951" y="289" width="208" height="141" rx="20" fill="#FFFDF7"/></g>
+  <text x="1055" y="333" class="head" text-anchor="middle">数据库</text><text x="1055" y="370" class="small" text-anchor="middle">约束 · 索引</text><text x="1055" y="399" class="small" text-anchor="middle">migration · backup</text>
+  <g filter="url(#shadow)"><rect x="951" y="468" width="208" height="131" rx="20" fill="#FFFDF7"/></g>
+  <text x="1055" y="508" class="head" text-anchor="middle">外部服务</text><text x="1055" y="544" class="small" text-anchor="middle">token · timeout</text><text x="1055" y="574" class="small" text-anchor="middle">retry · failure state</text>
+
+  <path d="M644 436v24" stroke="#CC6B45" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M812 534H900V359h40" fill="none" stroke="#CC6B45" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M900 534h40" fill="none" stroke="#CC6B45" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="61" y="704" width="1078" height="56" rx="18" fill="#173333"/>
+  <text x="600" y="728" text-anchor="middle" class="light" font-family="'Segoe UI',sans-serif" font-size="18" font-weight="700">CLIENT UI IS NOT A SECURITY BOUNDARY</text>
+  <text x="600" y="750" text-anchor="middle" class="light" font-family="'Segoe UI',sans-serif" font-size="16">Revalidate identity, permission and ownership on the server</text>
+</svg>
