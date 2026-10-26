@@ -1,31 +1,45 @@
 # Codex Vibecoding
 
-独立的 Codex Agent Skill：从需求澄清到 UI、API、数据层、测试与交付。与仓库原有的 `hana-vibecoding` 并存；不含 Hana App、扩展市场、安装器或运行时专属流程。
+把“想清楚再动手”改成“查清楚再复用，做完必须验收”的 Codex Agent Skill。适用于新功能、全栈切片、原型深化、代码修改和故障修复；不绑定 Hana App、框架、数据库或云平台。
+
+它解决的是一类常见失控：模型反复检查、从头设计、拿社交媒体传闻当结论，最后花了很长时间却没有可验证结果。这个 skill 用风险分档、机械检查、证据闭环和停止条件，把工作压回到最短可行路径。
 
 ![Codex Vibecoding 全栈工作流](assets/vibecoding-flow.svg)
 
-| 全栈边界 | 按风险选质量门 |
-|---|---|
-| ![全栈信任与数据流](assets/fullstack-map.svg) | ![质量门](assets/quality-gates.svg) |
+## 核心做法
 
-## 使用
+- **先复用，再发明**：先搜索仓库已有实现、依赖能力和现成测试，再决定是否新增。
+- **机械事实交给程序**：文件数量、引用、格式、类型和汇总数据用 `rg`、脚本、测试或 lint 判定，不靠模型硬看。
+- **故障按证据查**：社区/社交媒体找最新线索，GitHub issue、源码和 release notes 找原因，官方文档与当前版本复现确认适用条件。
+- **两次无进展就换路**：实现和排障时，同一路径连续两次没有结果就换方法，三次仍无结果就报告；已有产物的发布命令按更窄的重试限制处理。
+- **按风险验收**：T0 小改直接做，T1 做一条可验证垂直切片，T2 再补完整契约、测试与交付说明。
+- **外部动作有边界**：改代码不等于允许 push、部署、迁移、发布或产生费用；目标动作必须被明确授权。
+- **已有产物轻量收口**：只做必要的打包、一处完整性和目标回读，不重启整套实现验收；发布命令同类失败最多主动修正一次，成功回读后停止。
 
-可直接解压旁边的 `codex-vibecoding.zip`，或将整个 `codex-vibecoding/` 目录放入 Codex 可发现的技能目录：
+## 安装
 
-- 个人技能：`~/.agents/skills/codex-vibecoding/`
-- 当前仓库技能：`<repo>/.agents/skills/codex-vibecoding/`
+整个目录就是 skill，需要保留 `SKILL.md` 及其相邻的 `references/`、`assets/`、`templates/`、`eval/`，不要只复制入口文件。
 
-重新加载技能列表后，可由任务自动匹配，也可显式提及 `$codex-vibecoding`。保留 `SKILL.md` 及其相邻 `references/`、`assets/`、`templates/`；移动时不要只拷入口文件。
+```text
+~/.codex/skills/codex-vibecoding/
+$CODEX_HOME/skills/codex-vibecoding/
+```
 
-## 内容
+第一行是默认 Codex 主目录下的路径；两者指向同一位置时只使用其中一个。把完整目录放入后重新加载技能列表，即可让任务自动匹配，或显式写 `$codex-vibecoding`。若目标环境支持仓库内技能，也可放到 `<repo>/.agents/skills/codex-vibecoding/`。
 
-- `SKILL.md`：T0/T1/T2 分档、先复用后发明，以及必须遵循的协作边界。
-- `references/workflow.md`：需求、架构、实现、验证、交付的完整工作流，含优先复用、程序化检查和故障调研顺序。
-- `references/fullstack-checklist.md`：前后端、数据、集成、安全、可访问性、性能的按需检查项。
-- `references/skill-ecosystem.md`：已核实的优质技能与官方资料索引；只引用，不捆绑第三方 skill。
-- `references/principles.md`：先复用后推演、调试、测试、评审、沟通与证据纪律。
-- `templates/`：复杂任务的可选目标/验收模板。
-- `assets/`：自包含 SVG 流程、架构与质量图。
-- `eval/tasks.md`：用于人工检查技能行为的 T0/T1/T2、故障调研与机械检查样例。
+## 结构与验证
 
-该 skill 不指定 Next.js、数据库、云平台或某种测试框架；以目标仓库及用户选择为准。它不代替专业安全审计、架构评审或平台官方文档。
+- `SKILL.md`：入口规则、分档、最短执行闭环和已有产物的发布路径。
+- `references/workflow.md`：从现场勘查到交付的完整流程，以及故障调研和轻量发布顺序。
+- `references/principles.md`：复用、错误收敛、调试、测试、评审和 Git 纪律。
+- `references/fullstack-checklist.md`：按需取用的前后端、数据、安全和性能检查项。
+- `references/skill-ecosystem.md`：外部技能与官方资料索引。
+- `eval/tasks.md`：T0/T1/T2、故障调研、机械检查、轻量发布和报错收敛的人工对拍样例。
+- `templates/`：复杂任务的目标、验收与交付模板。
+- `assets/`：自包含的流程、边界和质量门图示。
+
+修改 `SKILL.md` 或流程后，至少运行 `quick_validate.py`，再用 `eval/tasks.md` 中相同提示做行为对拍。真实验收以执行命令、退出码、测试结果、浏览器操作或目标环境回读为准。
+
+## 适用边界
+
+该 skill 不替代专业安全审计、架构评审或平台官方文档，也不保证一次完成；它约束的是查找、复用、验证和停止猜测的方式。项目自身的 `AGENTS.md`、技术栈和用户明确要求优先。
